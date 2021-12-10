@@ -1,0 +1,198 @@
+\documentclass{beamer}
+\usetheme{CambridgeUS}
+
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{amsthm}
+\usepackage{tikzsymbols}
+\usepackage{parskip}
+
+%\newtheorem{theorem}{Theorem}[section]
+%\newtheorem{corollary}{Corollary}[theorem]
+%\newtheorem{lemma}[theorem]{Lemma}
+%\theoremstyle{definition}
+%\newtheorem{definition}{Definition}[section]
+\newtheorem{prop}[theorem]{Proposition}
+
+%Information to be included in the title page:
+\title{Section 2.3}
+\subtitle{Introduction to Proofs}
+\author{Dr. Ryan Johnson}
+\institute{Grace College}
+\date{Spring 2021}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\begin{frame}[plain]
+    \maketitle
+\end{frame}
+
+\begin{frame}{The Jesus Creed}
+\Large{
+"Hear, O Israel, the Lord our God, the Lord is one.\\
+You shall love the Lord your God\\
+\;\; with all your heart, with all your soul,\\
+\;\; with all your mind, and with all your strength.\\
+The second is this: Love your neighbor as yourself.\\
+There is no commandment greater than these."
+}
+\end{frame}
+
+\begin{frame}{Preview Activity 1: Sentences that are not Statements}
+	\begin{enumerate}
+		\item[1.a.] Use the roster method to specify the solutions to the equation $x^2 - 5 = 0$ if $x$ is restricted to being a real number.  \pause $\{-\sqrt{5}, \sqrt{5}\}$ \\[.1 in] 
+		\item[1.b.] Use the roster method to specify the solutions to $x^2 - 5 = 0$ if $x$ is restricted to being an integer. \pause $\{\}$ \\[.1 in] 
+		\item[1.c.] The set of integers greater than $-2$ \pause $\{-1, 0, 1, 2, ...\}$ \\[.1 in] 
+		\item[2.] \pause $A = \{...,13,16,19,22,...\}$
+		
+		$B = \{...32, 64, 128, 256, ...\}$
+		
+		$C = \{..., -16, -14, -12, -10...\}$
+		
+		$D = \{..., -15, -12, ..., 12, 15...\}$
+	\end{enumerate}
+\end{frame}
+
+\begin{frame}{Preview Activity 2: Variables}
+	New Definitions: \textbf{set}, \textbf{variable}, \textbf{universal set}.\\
+	Old Definitions: \textbf{real numbers, rational numbers, integers,} and \textbf{the natural numbers}.
+	\begin{enumerate}
+	    \item \begin{enumerate}
+	        \item[a.] Yes.
+	        \item[b.] No.
+	    \end{enumerate}
+		\item What real numbers will make the statement ``$y^2 - 2y - 15 = 0$'' a true statement when substituted for $x$? \pause
+		\item What natural numbers will make the statement ``$y^2 - 2y - 15 = 0$'' a true statement when substituted for $x$? \pause
+		\item What real numbers will make the sentence ``$\sqrt{x}$ is a real number'' a true statement when substituted for $x$?
+	\end{enumerate}
+\end{frame}
+
+\begin{frame}{Preview Activity 2: Variables}
+	\begin{itemize} 
+		\item What real numbers will make the sentence ``$\sin^2 x + \cos^2 x = 1$'' a true statement when substituted for $x$? \pause
+		\item What natural numbers will make the sentence ``$\sqrt{n}$ is a natural number'' a true statement when substituted for $n$? \pause
+		\item What real numbers will make the sentence
+		\[
+		\int_{0}^{y} t^2 dt > 9
+		\]
+		a true statement when substituted for $y$?
+	\end{itemize}
+	\pause
+	\[
+	\begin{aligned}
+	9 &< \int_0^y t^2 dt = \left[\frac{1}{3}t^3 \right]_0^y = \frac{1}{3}y^3\\
+	\implies 27 &< y^3\\
+	\implies 3 &< y
+	\end{aligned}
+	\]
+\end{frame}
+
+\begin{frame}{Progress Check 2.11 (Using the Roster Method)}
+	Note: You've known about sets most of your life.  What this section of the book is teaching is the \textbf{language} of sets.\\[.2 in] \pause
+	
+	Let $S = \{1, 4, 7, 10, ...\}$ and let $T = \{2, 4, 8, 16, ...\}.$  Determine four more elements in each set other than the four ones used in specifying the sets with the roster method.\pause
+	
+	\[
+	\begin{aligned}
+	&\{1, 4, 7, 10, 13, 16, 19, 22 ...\}\\
+	&\{2, 4, 8, 16, 32, 64, 128, 256, ...\}
+	\end{aligned}
+	\]
+\end{frame}
+
+\begin{frame}{Definitions}
+	\begin{definition}
+		Two sets, A and B are \textbf{equal} when they have precisely the same elements.  In this case, we write $A = B$.  If the sets $C$ and $D$ are not equal, we write $C \neq D$.
+	\end{definition}
+
+	\vspace{.2 in}
+	\pause
+	
+	\begin{definition}
+		A \textbf{variable} is a symbol representing an unspecified object that can
+		be chosen from a given set U. The set U is called the \textbf{universal set for the
+		variable}. It is the set of specified objects from which objects may be chosen
+		to substitute for the variable.\\[.1 in]
+		
+		A \textbf{constant} is a specific member of the universal set.\\[.1 in]
+		
+		A \textbf{predicate} is a sentence $P(x_1, x_2, ..., x_n)$ involving variables $x_1, ..., x_n$ with the property that when specific values from the universal set are assigned to $x_1, ..., x_n$ then the resulting sentence is either true or false. That is, the resulting sentence is a statement.  A predicate is also called an \textbf{open sentence}. % or a \textbf{propositional function}.
+	\end{definition}
+\end{frame}
+
+\begin{frame}{Progress Check 2.13 (Working with Predicates)}
+	\begin{enumerate}
+		\item Assume the universal set for all variables is $\mathbb{Z}$ and let $P(x)$ be the predicate ``$x^2 \leq 4$.'' \pause
+		\begin{itemize}
+			\item[(a)] Find two values of x for which $P(x)$ is false. \pause
+			\item[(b)] Find two values of x for which $P(x)$ is true. \pause
+			\item[(c)] Use the roster method to specify the set of all x for which $P(x)$ is true. \pause
+		\end{itemize}
+		\item Assume the universal set for all variables is $\mathbb{Z}$, and let $R(x,y,z)$ be the predicate, ``$x^2 + y^2 = z^2$.'' \pause
+		\begin{itemize}
+			\item[(a)] Find two values of x for which $R(x,y,z)$ is false. \pause
+			\item[(b)] Find two values of x for which $R(x,y,z)$ is true. 
+		\end{itemize}
+	\end{enumerate}
+\end{frame}
+
+\begin{frame}{Progress Check 2.15: Working with Truth Sets}
+	\begin{definition}
+		The \textbf{truth set of an predicate with one variable} is the
+		collection of objects in the universal set that can be substituted for the variable
+		to make the predicate a true statement.
+	\end{definition}
+
+	\pause
+	
+	Let $P(x)$ be the predicate “$x^2 \leq 9.$”
+	\begin{enumerate}
+	\item If the universal set is $\mathbb{R}$, describe the truth set of $P(x)$ using English and
+	write the truth set of $P(x)$ using set builder notation.
+	\vspace{1.5 in}
+	\end{enumerate}
+\end{frame}
+
+\begin{frame}{Progress Check 2.15: Working with Truth Sets}
+	\begin{enumerate}
+		\item[2.] If the universal set is $\mathbb{Z}$, then what is the truth set of $P(x)$? Describe this set using English and then use the roster method to specify all the elements of
+		this truth set.\\[1 in]\pause
+		\item[3.] Are the truth sets in Parts (1) and (2) equal? Explain.\\[1 in]
+	\end{enumerate}
+\end{frame}
+
+\begin{frame}{Progress Check 2.17 Set Builder Notation}
+	Each of the following sets is defined using the roster method.
+	\begin{tabular}{lp{.2 in}l}
+		$A = \{1, 5, 9, 13, ...\}$ & & $C = \left\{\sqrt{2}, \left(\sqrt{2}\right)^3, \left(\sqrt{2}\right)^5, ... \right\}$\\[.1 in]
+		$B = \{..., -8, -6, -4, -2, 0\}$ & & $D = \{1, 3, 9, 27, ...\}$
+	\end{tabular}
+	\begin{enumerate}
+		\item Determine four elements of each set other than the ones listed using the roster method. \pause
+		\begin{tabular}{lp{.03 in}l}
+			$17, 21, 25, 29 \in A$ & & $\left(\sqrt{2}\right)^7, \left(\sqrt{2}\right)^9, \left(\sqrt{2}\right)^7, \left(\sqrt{2}\right)^9 \in C$\\[.1 in]
+			$-10, -12, -14, -16 \in B$ & & $81, 243, 729, 2187 \in D$
+		\end{tabular} \pause
+		\item Use set builder notation to describe each set. \pause
+		\begin{tabular}{lp{.2 in}l}
+			$A = \{4n-3 | n \in \mathbb{N}\}$ & & $C = \left\{\left(\sqrt{2}\right)^{2n-1} | n \in \mathbb{N} \right\}$\\[.1 in]
+			$B = \{-2n + 2 | n \in \mathbb{N}\}$ & & $D = \{3^{n-1} | n \in \mathbb{N}\}$
+		\end{tabular}
+	\end{enumerate}
+\end{frame}
+
+\begin{frame}{Activity 2.18 Closure Explorations}
+	Closed under addition or multiplication?
+	\begin{enumerate}
+		\item The set of all odd natural numbers\\[.2 in]\pause
+		\item The set of all even numbers\\[.2 in]\pause
+		\item $A = \{1, 4, 7, 10, 13, ...\}$\\[.2 in]\pause
+		\item $B = \{..., -6, -3, 0, 3, 6, 9, ...\}$\\[.2 in]\pause
+		\item $C = \{3n + 1 | n \in \mathbb{Z}\}$\\[.2 in]\pause
+		\item $D = \left\{\dfrac{1}{2^n} | n \in \mathbb{N} \right\}$
+	\end{enumerate}
+\end{frame}
+
+\end{document}
+
+

@@ -1,0 +1,96 @@
+\documentclass{beamer}
+\usetheme{CambridgeUS}
+
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{amsthm}
+\usepackage{tikzsymbols}
+\usepackage{parskip}
+\usepackage{multicol}
+
+%These for for continuing numbering between frames
+\newcounter{saveenumi}
+\newcommand{\seti}{\setcounter{saveenumi}{\value{enumi}}}
+\newcommand{\conti}{\setcounter{enumi}{\value{saveenumi}}}
+
+%\newtheorem{theorem}{Theorem}[section]
+%\newtheorem{corollary}{Corollary}[theorem]
+%\newtheorem{lemma}[theorem]{Lemma}
+%\theoremstyle{definition}
+%\newtheorem{definition}{Definition}[section]
+\newtheorem{prop}[theorem]{Proposition}
+
+%Information to be included in the title page:
+\title{Section 4.3}
+\subtitle{Introduction to Proofs}
+\author{Dr. Ryan Johnson}
+\institute{Grace College}
+\date{Spring 2021}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\begin{frame}[plain]
+    \maketitle
+\end{frame}
+
+\begin{frame}{The Jesus Creed}
+\Large{
+"Hear, O Israel, the Lord our God, the Lord is one.\\
+You shall love the Lord your God\\
+\;\; with all your heart, with all your soul,\\
+\;\; with all your mind, and with all your strength.\\
+The second is this: Love your neighbor as yourself.\\
+There is no commandment greater than these."
+}
+\end{frame}
+
+\begin{frame}{Preview Activity 1}
+    \[b_1 = 16 \ \ \ \text{ and } \ \ \ b_{n+1} = \frac{1}{2} b_n \]
+    \begin{enumerate}
+        \item Calculate $b_4$ through $b_{10}$. What seems to be happening to the values of $b_n$ as n gets larger? \pause
+        \item Define a sequence recursively as follows:
+        \[
+        T_1 = 16, \text{ and for each } n \in \mathbb{N}, T_{n+1} = 16 + \frac{1}{2}T_n.
+        \]
+        Calculate $T_3$ through $T_{10}$. \pause
+        \begin{align*}
+            a_1 &= a, \text{ and for each } n \in \mathbb{N}, a_{n+1} = r \cdot a_n
+            S_1 &= a, \text{ and for each } n \in \mathbb{N}, S_{n+1} = r \cdot S_n
+        \end{align*}
+        \item Determine formulas (in terms of a and r) for $a_2$ through $a_6$. What do you think an is equal to (in terms of a, r, and n)? \pause
+        \item Determine formulas (in terms of a and r) for $S_2$ through $S_6$. What do you think an is equal to (in terms of a, r, and n)? 
+        \seti
+    \end{enumerate}
+\end{frame}
+
+\begin{frame}{Preview Activity 1}
+    \begin{enumerate}
+        \conti
+        \[a_1 = 1\ \ \ \text{ and } a_{n+1} = (n+1)a_n\]
+        \item Calculate $a_3$ through $a_6$ \pause
+        \item $a_{20}$? $a_{100}$? \pause
+        \item Can we calculate $a_n$ for any natural number?
+    \end{enumerate}
+\end{frame}
+
+\begin{frame}{Preview Activity 2}
+    $f_1 = 1$, $f_2 = 1$ and for each $n \in \mathbb{N}$ $f_{n+2} = f_{n+1} + f_n$.
+    \begin{enumerate}
+        \item Calculate $f_6$ through $f_{20}$ \pause
+        \item Which Fibonacci numbers are even?  Which are multiples of 3?
+        \item partial sums of Fibonacci numbers?
+        \item Record any other observations about the values of the Fibonacci numbers
+or any patterns that you observe in the sequence of Fibonacci numbers. If
+necessary, compute more Fibonacci numbers.
+    \end{enumerate}
+\end{frame}
+
+\begin{frame}{Progress Check 4.12}
+For each natural number n, the Fibonacci number $f_{3n}$ is an
+even natural number.    
+\end{frame}
+
+\end{document}
+
+

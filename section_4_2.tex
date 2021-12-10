@@ -1,0 +1,91 @@
+\documentclass{beamer}
+\usetheme{CambridgeUS}
+
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{amsthm}
+\usepackage{tikzsymbols}
+\usepackage{parskip}
+\usepackage{multicol}
+
+%These for for continuing numbering between frames
+\newcounter{saveenumi}
+\newcommand{\seti}{\setcounter{saveenumi}{\value{enumi}}}
+\newcommand{\conti}{\setcounter{enumi}{\value{saveenumi}}}
+
+%\newtheorem{theorem}{Theorem}[section]
+%\newtheorem{corollary}{Corollary}[theorem]
+%\newtheorem{lemma}[theorem]{Lemma}
+%\theoremstyle{definition}
+%\newtheorem{definition}{Definition}[section]
+\newtheorem{prop}[theorem]{Proposition}
+
+%Information to be included in the title page:
+\title{Section 4.2}
+\subtitle{Introduction to Proofs}
+\author{Dr. Ryan Johnson}
+\institute{Grace College}
+\date{Spring 2021}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\begin{frame}[plain]
+    \maketitle
+\end{frame}
+
+\begin{frame}{The Jesus Creed}
+\Large{
+"Hear, O Israel, the Lord our God, the Lord is one.\\
+You shall love the Lord your God\\
+\;\; with all your heart, with all your soul,\\
+\;\; with all your mind, and with all your strength.\\
+The second is this: Love your neighbor as yourself.\\
+There is no commandment greater than these."
+}
+\end{frame}
+
+\begin{frame}{Preview Activity 1}
+    \begin{definition}
+    Definition. If n is a natural number, we define n factorial, denoted by $n!$ , to be the product of the first n natural numbers. In addition, we define $0!$ to be equal to 1.
+    \end{definition}
+    
+    \begin{enumerate}
+        \item Compute the values of $2^n$ and $n!$ for each natural number n with $1 \leq n \leq 7$. \pause
+        \uplevel{Now let $P(n)$ be the open sentence, ``$n! > 2^n$.''} \pause
+        \item Which of the statements $P(1)$ through $P(7)$ are true? \pause
+        \item Based on the evidence so far, does the following proposition appear to be true or false? For each natural number n with $n \geq 4$ ,$n! > 2^n$.
+        \item Explain why $(k+1) \cdot k! = (k+1)!$.
+        \item Explain $k \geq 4 \implies (k+1) > 2 \implies (k+1)2^k > 2^{k+1}$
+    \end{enumerate}
+\end{frame}
+
+\begin{frame}{Preview Activity 2}
+    \begin{enumerate}
+        \item Give examples of four natural numbers that are prime and four natural numbers
+that are composite. \pause
+        \item Write each of the natural numbers 20, 40, 50, and 150 as a product of prime
+numbers. \pause
+        \item Do you think that any composite number can be written as a product of prime
+numbers? \pause
+        \item Write a useful description of what it means to say that a natural number is a
+composite number (other than saying that it is not prime). \pause
+        \item Based on your work in Part (2), do you think it would be possible to use
+induction to prove that any composite number can be written as a product of
+prime numbers?
+    \end{enumerate}
+\end{frame}
+
+\begin{frame}{Progress Check 4.8}
+    Formulate a conjecture (with an appropriate quantifier) that can be used as an answer
+to each of the following questions.
+\begin{enumerate}
+    \item When is $3^n$ greater than $1 + 2^n$?
+    \item When is $2^n$ greater than $(n+1)^2$?
+    \item What is $(1 + \frac{1}{n})^n$ greater than 2.5?
+\end{enumerate}
+\end{frame}
+
+\end{document}
+
+

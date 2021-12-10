@@ -1,0 +1,115 @@
+\documentclass{beamer}
+\usetheme{CambridgeUS}
+
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{amsthm}
+\usepackage{tikzsymbols}
+\usepackage{parskip}
+\usepackage{multicol}
+
+%These for for continuing numbering between frames
+\newcounter{saveenumi}
+\newcommand{\seti}{\setcounter{saveenumi}{\value{enumi}}}
+\newcommand{\conti}{\setcounter{enumi}{\value{saveenumi}}}
+
+%\newtheorem{theorem}{Theorem}[section]
+%\newtheorem{corollary}{Corollary}[theorem]
+%\newtheorem{lemma}[theorem]{Lemma}
+%\theoremstyle{definition}
+%\newtheorem{definition}{Definition}[section]
+\newtheorem{prop}[theorem]{Proposition}
+
+%Information to be included in the title page:
+\title{Section 5.3}
+\subtitle{Introduction to Proofs}
+\author{Dr. Ryan Johnson}
+\institute{Grace College}
+\date{Spring 2021}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\begin{frame}[plain]
+    \maketitle
+\end{frame}
+
+\begin{frame}{The Jesus Creed}
+\Large{
+"Hear, O Israel, the Lord our God, the Lord is one.\\
+You shall love the Lord your God\\
+\;\; with all your heart, with all your soul,\\
+\;\; with all your mind, and with all your strength.\\
+The second is this: Love your neighbor as yourself.\\
+There is no commandment greater than these."
+}
+\end{frame}
+
+\begin{frame}[t]{Preview Activity 1}
+    \begin{enumerate}
+        \item Draw two general Venn diagrams for the sets A and B. On one, shade the
+region that represents $(A \cup B)^c$, and on the other, shade the region that represents
+$A^c \cap B^c$.
+        \item Based on the Venn diagrams in Part (1), what appears to be the relationship?
+        \seti
+    \end{enumerate}
+\end{frame}
+
+\begin{frame}[t]{Preview Activity 1}
+    \begin{enumerate}
+        \conti
+        \item Use one of DeMorgan’s Laws (Theorem 2.8 on page 48) to explain carefully
+what it means to say that an element x is not in $A \cup B$. \pause
+        \item What does it mean to say that an element x is in $A^c$? What does it mean to
+say that an element x is in $B^c$? \pause
+        \item Explain carefully what it means to say that an element x is in $A^c \cap B^c$ \pause
+        \item Are \# 3 and \#5 similar?
+        \item How are the sets related?
+    \end{enumerate}
+\end{frame}
+
+\begin{frame}[t]{Preview Activity 2}
+    \begin{enumerate}
+        \item Let X, Y, and Z be statements.  Complete a truth table for
+        \[\Big((X \to Y) \wedge (Y \to Z) \Big) \to (X \to Z)\]
+        \seti
+    \end{enumerate}
+\end{frame}
+
+\begin{frame}[t]{Preview Activity 2}
+    \begin{enumerate}
+        \conti
+        \item Assume P, Q, and R are statements and that we have proven that the following conditional statements are true.
+        \begin{itemize}
+            \begin{multicols}{3}
+            \item $P \to Q$
+            \item $Q \to R$
+            \item $R \to P$
+            \end{multicols}
+        \end{itemize}
+        Explain why each of the following statments is true
+        \begin{enumerate}
+            \begin{multicols}{3}
+                \item $P \leftrightarrow Q$
+                \item $Q \leftrightarrow R$
+                \item $R \leftrightarrow P$
+            \end{multicols} 
+        \end{enumerate}
+    \end{enumerate}
+\end{frame}
+
+\begin{frame}[t]{Progress Check 5.19}
+    Note: Theorem 5.18 on page 246 is important.
+\begin{enumerate}
+    \item Draw A Venn Diagram for the sets A, B, and C inside a universal set U.  Shade in $A \cup (B \cap C)$ and $(A \cup B) \cap (A \cup C)$.
+    \item Is there a relationship?  Prove it.
+\end{enumerate}
+\end{frame}
+
+\begin{frame}[t]{Class Activity}
+    If time allows, prove $(A \cap B)^c = A^c \cup B^c$
+\end{frame}
+
+\end{document}
+
+

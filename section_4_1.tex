@@ -1,0 +1,131 @@
+\documentclass{beamer}
+\usetheme{CambridgeUS}
+
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{amsthm}
+\usepackage{tikzsymbols}
+\usepackage{parskip}
+\usepackage{multicol}
+
+%These for for continuing numbering between frames
+\newcounter{saveenumi}
+\newcommand{\seti}{\setcounter{saveenumi}{\value{enumi}}}
+\newcommand{\conti}{\setcounter{enumi}{\value{saveenumi}}}
+
+%\newtheorem{theorem}{Theorem}[section]
+%\newtheorem{corollary}{Corollary}[theorem]
+%\newtheorem{lemma}[theorem]{Lemma}
+%\theoremstyle{definition}
+%\newtheorem{definition}{Definition}[section]
+\newtheorem{prop}[theorem]{Proposition}
+
+%Information to be included in the title page:
+\title{Section 4.1}
+\subtitle{Introduction to Proofs}
+\author{Dr. Ryan Johnson}
+\institute{Grace College}
+\date{Spring 2021}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\begin{frame}[plain]
+    \maketitle
+\end{frame}
+
+\begin{frame}{The Jesus Creed}
+\Large{
+"Hear, O Israel, the Lord our God, the Lord is one.\\
+You shall love the Lord your God\\
+\;\; with all your heart, with all your soul,\\
+\;\; with all your mind, and with all your strength.\\
+The second is this: Love your neighbor as yourself.\\
+There is no commandment greater than these."
+}
+\end{frame}
+
+\begin{frame}{Preview Activity 1}
+    For each natural number n, let P(n) be the following open sentence:
+    \[4 \text{ divides }\ (5^h-1). \] \pause
+\begin{enumerate}
+    \item Does this open sentence become a true statement when n = 1? That is, is 1 in the truth set of P(n)? \pause
+    \item Does this open sentence become a true statement when n = 2? That is, is 2 in the truth set of P(n)? \pause
+    \item Choose at least four more natural numbers and determine whether the open sentence is true or false for each of your choices.
+    \seti
+\end{enumerate}
+\end{frame}
+
+\begin{frame}{Preview Activity 1}
+    For each natural number n, let $Q(x)$ be the following open sentence
+    \[
+    1^2 + 2^2 + 3^2 + ... + n^2 = \frac{n(n+1)(2n+1)}{6}.
+    \] \pause
+    \begin{enumerate}
+        \conti
+        \item Does Q(n) become a true statement when $n = 1,2,3$? \pause
+        \item Choose at least four more numbers.
+    \end{enumerate}
+\end{frame}
+
+\begin{frame}{Preview Activity 2}
+    \begin{definition}
+    A set T that is a subset of $\mathbb{Z}$ is an inductive set provided that for each integer k, if $k \in T$ , then $k+1 \in T$ .
+    \end{definition}
+    
+    \begin{enumerate}
+        \item Carefully explain what it means to say that a subset T of the integers $\mathbb{Z}$ is not an inductive set. This description should use an existential quantifier.
+        \begin{enumerate}
+        \begin{multicols}{2}
+            \item $A = \{1,2,...20\}$ \pause
+            \item $\mathbb{N}$ \pause
+            \item $B = \{n \in \mathbb{N} \ | \ n \geq 5\}$ \pause
+            \item $S = \{n \in \mathbb{N} \ | \ n \geq -3\}$ \pause
+            \item $R = \{n \in \mathbb{N} \ | \ n \leq 100\}$ \pause
+            \item $\mathbb{Z}$
+            \item The odd natural numbers
+            \end{multicols}
+        \end{enumerate}
+        \item Assume that $T \subseteq \mathbb{N}$ and assume that $1 \in \mathbb{N}$ and that T is an inductive set.  Are 2,3,4, 100 in T?  Is $T = \mathbb{N}$?
+    \end{enumerate}
+\end{frame}
+
+\begin{frame}{Progress Check 4.1}
+    Suppose that T is an inductive subset of the integers. Which of the following
+statements are true, which are false, and for which ones is it not possible to tell?
+\begin{enumerate}
+    \begin{multicols}{2}
+        \item $1 \in T$ and $5 \in T$
+        \item If $1 \in T$ then $5 \in T$
+        \item $5 \not \in T$ then $2 \not \in T$
+        \item $\forall k \in T$, if $k \in T$, then $k+7 \in T$.
+        \item For each integer k, $k \not \in T$ or $k+1 \in T$
+        \item There exists an integer k such that $k \in T$ and $k+1 \not \in T$
+        \item For each integer k, if $k+1 \in T$, then $k \in T$.
+        \item For each integer k, if $k+1 \not \in T$, then $k \not \in T$
+    \end{multicols}
+\end{enumerate}
+\end{frame}
+
+\begin{frame}{Frame Title}
+    Note: Procedure for a Proof by Mathematical Induction on page 174\\
+    
+    In class, prove 
+    \[
+    1^2 + 2^2 + 3^2 + ... + n^2 = \frac{n(n+1)(2n+1}{6}.
+    \]
+    
+    Then, student prove
+    \[
+    1 + 2 + 3 + ... + n = \frac{n(n+1)}{2}.
+    \]
+    
+    If time allows, also have students prove preview activity 2
+    
+    HW \#6
+\end{frame}
+
+
+\end{document}
+
+

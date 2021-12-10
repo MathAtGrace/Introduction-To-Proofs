@@ -1,0 +1,156 @@
+\documentclass{beamer}
+\usetheme{CambridgeUS}
+
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{amsthm}
+\usepackage{tikzsymbols}
+\usepackage{parskip}
+
+%\newtheorem{theorem}{Theorem}[section]
+%\newtheorem{corollary}{Corollary}[theorem]
+%\newtheorem{lemma}[theorem]{Lemma}
+%\theoremstyle{definition}
+%\newtheorem{definition}{Definition}[section]
+\newtheorem{prop}[theorem]{Proposition}
+
+%Information to be included in the title page:
+\title{Section 1.2}
+\subtitle{Introduction to Proofs}
+\author{Dr. Ryan Johnson}
+\institute{Grace College}
+\date{Spring 2021}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\begin{frame}[plain]
+    \maketitle
+\end{frame}
+
+\begin{frame}{The Jesus Creed}
+\Large{
+"Hear, O Israel, the Lord our God, the Lord is one.\\
+You shall love the Lord your God\\
+\;\; with all your heart, with all your soul,\\
+\;\; with all your mind, and with all your strength.\\
+The second is this: Love your neighbor as yourself.\\
+There is no commandment greater than these."
+}
+\end{frame}
+
+\begin{frame}{Preview Activity 1}
+	
+	\begin{definition}
+		An integer $a$ is an \textbf{even integer} provided that there exists an integer \Smiley such that $a = 2\Smiley$.  An integer $b$ is an \textbf{odd integer} provided there exists an integer \Cooley such that $b = 2\Cooley + 1$.
+	\end{definition}
+	\begin{enumerate}
+		\item Use the definitions given above to
+		\begin{enumerate}
+			\item Explain why $8, -12, 24$, and 0 are even integers.
+			\item Explain why $7, -11, 51, 1,$ and $-1$ are odd integers.
+		\end{enumerate}
+	\item Are the definitions of even and odd integers consistent with your previous ideas about even and odd integers?
+	\end{enumerate}
+\end{frame}
+
+\begin{frame}{Preview Activity 2}
+	\begin{prop}
+		If $x$ and $y$ are odd integers, then $x \cdot y$ is an odd integer.
+	\end{prop}
+
+	\begin{enumerate}
+		\item The proposition is a conditional statement. What is the hypothesis of this conditional statement? What is the conclusion of this conditional statement? \pause
+		\item If $x = 2$ and $y = 3$, then $x \cdot y = 6$. Does this example prove that the proposition is false? Explain. \pause
+		\item If $x = 5$ and $y = 3$, then $x \cdot y = 15$. Does this example prove that the proposition is true? Explain.
+	\end{enumerate}
+\end{frame}
+
+\begin{frame}{Preview Activity 2}
+	\begin{prop}
+		If $x$ and $y$ are odd integers, then $x \cdot y$ is an odd integer.
+	\end{prop}
+	
+	\begin{enumerate}
+		\item[4.] What would we have to do to prove that this conditional statement is true? \pause
+		\item[5.] To start a proof of this proposition, we will assume that the hypothesis is true.  What what do we assume in this case? \pause
+		\item[6.] We need to prove that if the hypothesis is true, then the conclusion is also true.  So for this proposition, after we assume the hypothesis is true, what do we need to prove?\pause
+		\item[7.] How do we prove that an integer is an odd integer?
+	\end{enumerate}
+\end{frame}
+
+%2020 Note: did not get to this.  Too much COVID 19 talk.
+\begin{frame}{Properties of Number Systems}
+	\begin{itemize}
+		\item The integers $\mathbb{Z}$ are \textbf{closed} under addition, subtraction, and multiplication.  This means
+		\begin{itemize}
+			\item If $x$ and $y$ are integers, then $x + y$ is an integer;
+			\item If $x$ and $y$ are integers, then $x - y$ is an integer;
+			\item If $x$ and $y$ are integers, then $x \cdot y$ is an integer;
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Properties of Number Systems}
+	\begin{enumerate}
+		\item Is the set of rational numbers closed under addition? Explain.\\[.75 in]
+		\item Is the set of integers closed under division? Explain.\\[.75 in]
+		\item Is the set of rational numbers closed under subtraction? Explain.\\[.75 in]
+	\end{enumerate}
+\end{frame}
+
+\begin{frame}{Properties of Number Systems}
+	\begin{center}
+		For all real numbers $x$, $y$, and $z$
+		{\renewcommand{\arraystretch}{2}
+		\begin{tabular}{|p{1.2 in}|p{2.8 in}|}
+			\hline
+			Identity Properties & \\ \hline
+			Inverse Properties & \\ \hline
+			Commutative Properties & \\ \hline
+			Associative\;\;\; Properties & \\ \hline
+			Distributive\;\; Properties & \\ \hline
+		\end{tabular}
+		}
+	\end{center}
+\end{frame}
+
+\begin{frame}{Know-Show Tables}
+	\begin{prop}
+		If $x$ and $y$ are odd integers, then $x \cdot y$ is an odd integer.
+	\end{prop}
+
+	\begin{center}
+		$P \to Q$
+		\begin{tabular}{|l|p{1.75 in}|p{1.75 in}|}
+			\hline
+			\textbf{Step} & \textbf{Know} & \textbf{Reason} \\ \hline
+			P & $x$ and $y$ are odd integers. & Hypothesis\\ \hline
+			& \vspace{.3 in} &\\ \hline
+			&& \\ \hline
+			&& \\ \hline
+			&& \\ \hline
+			&& \\ \hline
+			& \vspace{.2 in} & \\ \hline
+			Q & $x \cdot y$ is an odd integer. & Definition of an odd integer.\\ \hline
+		\end{tabular}
+	\end{center}
+\end{frame}
+
+\begin{frame}{Writing It Up}
+	\begin{theorem}
+		If $x$ and $y$ are odd integers, then $x \cdot y$ is an odd integer.
+	\end{theorem}
+	\begin{proof}
+		\vspace{2 in}
+	\end{proof}
+\end{frame}
+
+\begin{frame}{Progress Check 1.9}
+    Construct a know-show table for each of the following proposition and then write a formal proof.
+    \begin{itemize}
+        \item If $x$ is an even integer and $y$ is an even integer, then $x+y$ is an even integer.
+    \end{itemize}
+\end{frame}
+
+\end{document}
+

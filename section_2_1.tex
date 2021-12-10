@@ -1,0 +1,259 @@
+\documentclass{beamer}
+\usetheme{CambridgeUS}
+
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{amsthm}
+\usepackage{tikzsymbols}
+\usepackage{parskip}
+
+%\newtheorem{theorem}{Theorem}[section]
+%\newtheorem{corollary}{Corollary}[theorem]
+%\newtheorem{lemma}[theorem]{Lemma}
+%\theoremstyle{definition}
+%\newtheorem{definition}{Definition}[section]
+\newtheorem{prop}[theorem]{Proposition}
+
+%Information to be included in the title page:
+\title{Section 2.1}
+\subtitle{Introduction to Proofs}
+\author{Dr. Ryan Johnson}
+\institute{Grace College}
+\date{Spring 2021}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\begin{frame}[plain]
+    \maketitle
+\end{frame}
+
+\begin{frame}{The Jesus Creed}
+\Large{
+"Hear, O Israel, the Lord our God, the Lord is one.\\
+You shall love the Lord your God\\
+\;\; with all your heart, with all your soul,\\
+\;\; with all your mind, and with all your strength.\\
+The second is this: Love your neighbor as yourself.\\
+There is no commandment greater than these."
+}
+\end{frame}
+
+\begin{frame}{Preview Activity 1}
+	We will use the following two statements for all of this Preview Activity:
+	\begin{itemize}
+		\item P is the statement ``It is raining.''
+		\item Q is the statement ``Daisy is playing golf.''
+	\end{itemize}
+	\begin{enumerate}
+		\item When P is true (it is raining) and Q is true (Daisy is playing golf).\\[.1 in]
+		\begin{tabular}{ll}
+			(a) $(P \wedge Q)$ & It is raining and Daisy is playing golf.\\[.1 in]
+			(b) $(P \vee Q)$ & It is raining or Daisy is playing golf.\\[.1 in]
+			(c) $(P \to Q)$ & If it is raining, then Daisy is playing golf.\\[.1 in]
+			(d) $(\neg P)$ & It is not raining.
+		\end{tabular}
+	\end{enumerate}
+\end{frame}
+
+\begin{frame}{Preview Activity 1}
+	We will use the following two statements for all of this Preview Activity:
+	\begin{itemize}
+		\item P is the statement ``It is raining.''
+		\item Q is the statement ``Daisy is playing golf.''
+	\end{itemize}
+	\begin{enumerate}
+		\item[2.]  When P is true (it is raining) and Q is false (Daisy is not playing golf).\\[.1 in]
+		\begin{tabular}{ll}
+			(a) $(P \wedge Q)$ & It is raining and Daisy is playing golf.\\[.1 in]
+			(b) $(P \vee Q)$ & It is raining or Daisy is playing golf.\\[.1 in]
+			(c) $(P \to Q)$ & If it is raining, then Daisy is playing golf.\\[.1 in]
+			(d) $(\neg P)$ & It is not raining.
+		\end{tabular}
+	\end{enumerate}
+\end{frame}
+
+\begin{frame}{Preview Activity 1}
+	We will use the following two statements for all of this Preview Activity:
+	\begin{itemize}
+		\item P is the statement ``It is raining.''
+		\item Q is the statement ``Daisy is playing golf.''
+	\end{itemize}
+	\begin{enumerate}
+		\item[3.]  When P is false (it is not raining) and Q is true (Daisy is playing golf).\\[.1 in]
+		\begin{tabular}{ll}
+			(a) $(P \wedge Q)$ & It is raining and Daisy is playing golf.\\[.1 in]
+			(b) $(P \vee Q)$ & It is raining or Daisy is playing golf.\\[.1 in]
+			(c) $(P \to Q)$ & If it is raining, then Daisy is playing golf.\\[.1 in]
+			(d) $(\neg P)$ & It is not raining.
+		\end{tabular}
+	\end{enumerate}
+\end{frame}
+
+\begin{frame}{Preview Activity 1}
+	We will use the following two statements for all of this Preview Activity:
+	\begin{itemize}
+		\item P is the statement ``It is raining.''
+		\item Q is the statement ``Daisy is playing golf.''
+	\end{itemize}
+	\begin{enumerate}
+		\item[4.]  When P is false (it is not raining) and Q is false (Daisy is not playing golf).\\[.1 in]
+		\begin{tabular}{ll}
+			(a) $(P \wedge Q)$ & It is raining and Daisy is playing golf.\\[.1 in]
+			(b) $(P \vee Q)$ & It is raining or Daisy is playing golf.\\[.1 in]
+			(c) $(P \to Q)$ & If it is raining, then Daisy is playing golf.\\[.1 in]
+			(d) $(\neg P)$ & It is not raining.
+		\end{tabular}
+	\end{enumerate}
+\end{frame}
+
+\begin{frame}{Preview Activity 2 (Truth Tables)}
+	\begin{center} 
+	\begin{tabular}{|c|c|}
+		\hline
+		P & not P\\ \hline
+		T & \\ \hline
+		F & \\ \hline
+	\end{tabular}
+
+	\vspace{.5 in}
+	
+	\begin{tabular}{|c|c|c|}
+		\hline
+		P & Q & P and Q\\ \hline
+		T & T & \\ \hline
+		T & F & \\ \hline
+		F & T & \\ \hline
+		F & F & \\ \hline
+	\end{tabular}
+	\end{center}
+\end{frame}
+
+\begin{frame}{Preview Activity 2 (Truth Tables)}
+	\begin{center} 
+		\begin{tabular}{|c|c|c|}
+			\hline
+			P & Q & P or Q\\ \hline
+			T & T & \\ \hline
+			T & F & \\ \hline
+			F & T & \\ \hline
+			F & F & \\ \hline
+		\end{tabular}
+		
+		\vspace{.5 in}
+		
+		\begin{tabular}{|c|c|c|}
+			\hline
+			P & Q & $P \to Q$\\ \hline
+			T & T & \\ \hline
+			T & F & \\ \hline
+			F & T & \\ \hline
+			F & F & \\ \hline
+		\end{tabular}
+	\end{center}
+\end{frame}
+
+\begin{frame}{Preview Activity 2 (Truth Tables)}
+	\begin{center} 
+		\begin{tabular}{|c|c|c|c|c|}
+			\hline
+			P & Q & not P & not Q & not $Q \to $ not P\\ \hline
+			T & T &&& \\ \hline
+			T & F &&& \\ \hline
+			F & T &&& \\ \hline
+			F & F &&& \\ \hline
+		\end{tabular}
+	\end{center}
+\end{frame}
+
+\begin{frame}{Things to note in section 2.1}
+	\begin{itemize}
+		\item Definitions of logical operator and compound statement.\\[.1 in] \pause
+		\item Table 2.1 on page 31\\[.1 in] \pause
+		\item Math ``or'' is ``inclusive or.''\\[.1 in] \pause
+		\item Table 2.2 on page 32\\[.1 in] \pause
+		\item Bottom of page 32: different ways we say $P \to Q$ in English.
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Progress Check 2.1}
+	Recall that a quadrilateral is a four-sided polygon. Let S represent the following
+	true conditional statement:
+	\begin{center}
+		If a quadrilateral is a square, then it is a rectangle.
+	\end{center}
+	Write this conditional statement in English using
+	\begin{enumerate}
+		\item the word ``whenever.''\\[.1 in] \pause
+		\begin{center}
+			Whenever a quadrilateral is a square, it is a rectangle.\\[.1 in] \pause
+		\end{center}
+		\item the phrase ``only if.''\\[.1 in] \pause
+		\begin{center}
+			A quadrilateral is a square, only if it is a rectangle.\\[.1 in] 
+		\end{center}
+	\end{enumerate}
+\end{frame}
+
+\begin{frame}{Progress Check 2.1}
+	Recall that a quadrilateral is a four-sided polygon. Let S represent the following
+	true conditional statement:
+	\begin{center}
+		If a quadrilateral is a square, then it is a rectangle.
+	\end{center}
+	Write this conditional statement in English using
+	\begin{enumerate}
+		\item[3.] the phrase ``is necessary for.''\\[.1 in] \pause
+		\begin{center}
+			A quadrilateral being a rectangle is necessary for it being a square.\\[.1 in] \pause
+		\end{center}
+		\item[4.] the phrase ``is sufficient for.''\\[.1 in] \pause
+		\begin{center}
+			A quadrilateral being a square is sufficient for it being a rectangle.\\[.1 in]
+		\end{center}
+	\end{enumerate}
+\end{frame}
+
+\begin{frame}{Progress Check 2.2 (Constructing Truth Tables)}
+	1. $P \wedge \neg Q$
+\end{frame}
+
+\begin{frame}{Progress Check 2.2 (Constructing Truth Tables)}
+	2. $\neg(P \wedge Q)$
+\end{frame}
+
+\begin{frame}{Progress Check 2.2 (Constructing Truth Tables)}
+	3. $\neg P \wedge \neg Q$
+\end{frame}
+
+\begin{frame}{Progress Check 2.2 (Constructing Truth Tables)}
+	4. $\neg P \vee \neg Q$
+\end{frame}
+
+\begin{frame}{Progress Check 2.3 (The Truth Table for the Biconditional Statement)}
+	\begin{center}
+		Complete a truth table for $\large((Q \to P) \wedge (P \to Q)\large)$.
+	\end{center}
+	\vspace{3 in}
+\end{frame} 
+
+\begin{frame}{Acitivity 2.4 (Working with Conditional Statements)}
+	\begin{tabular}{|l|c|c|c|}
+		\hline
+		English Form & Hypothesis & Conclusion & Symbolic Form\\[.05 in] \hline
+		If P, then Q &&&\\[.05 in] \hline
+		Q only if P  &&&\\[.05 in] \hline
+		P is necessary for Q  &&&\\[.05 in] \hline
+		P is sufficient for Q  &&&\\[.05 in] \hline
+		P implies Q  &&&\\[.05 in] \hline
+		P only if Q  &&&\\[.05 in] \hline
+		P if Q  &&&\\[.05 in] \hline
+		If Q then P  &&&\\[.05 in] \hline
+		If $\neg Q$ then $\neg p$. &&&\\[.05 in] \hline
+		If P, then $Q \wedge R$.  &&&\\[.05 in] \hline
+		If $P \vee Q$, then R.  &&&\\[.05 in] \hline
+	\end{tabular}
+\end{frame}
+
+\end{document}
+
+

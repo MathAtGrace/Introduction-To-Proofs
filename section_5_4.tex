@@ -1,0 +1,117 @@
+\documentclass{beamer}
+\usetheme{CambridgeUS}
+
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{amsthm}
+\usepackage{tikzsymbols}
+\usepackage{parskip}
+\usepackage{multicol}
+
+%These for for continuing numbering between frames
+\newcounter{saveenumi}
+\newcommand{\seti}{\setcounter{saveenumi}{\value{enumi}}}
+\newcommand{\conti}{\setcounter{enumi}{\value{saveenumi}}}
+
+%\newtheorem{theorem}{Theorem}[section]
+%\newtheorem{corollary}{Corollary}[theorem]
+%\newtheorem{lemma}[theorem]{Lemma}
+%\theoremstyle{definition}
+%\newtheorem{definition}{Definition}[section]
+\newtheorem{prop}[theorem]{Proposition}
+
+%Information to be included in the title page:
+\title{Section 5.4}
+\subtitle{Introduction to Proofs}
+\author{Dr. Ryan Johnson}
+\institute{Grace College}
+\date{Spring 2021}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\begin{frame}[plain]
+    \maketitle
+\end{frame}
+
+\begin{frame}{The Jesus Creed}
+\Large{
+"Hear, O Israel, the Lord our God, the Lord is one.\\
+You shall love the Lord your God\\
+\;\; with all your heart, with all your soul,\\
+\;\; with all your mind, and with all your strength.\\
+The second is this: Love your neighbor as yourself.\\
+There is no commandment greater than these."
+}
+\end{frame}
+
+\begin{frame}[t]{Preview Activity 1}
+    \begin{enumerate}
+        \item List six different elements of the truth set (often called the solution set) of
+the open sentence with two variables $2x+3y=12$.
+        \item Sketch the graph.  What does it show?
+        \item Write a description of the solution set S of the equation  $2x+3y=12$ using
+set builder notation.
+    \end{enumerate}
+\end{frame}
+
+\begin{frame}{Preview Activity 2}
+    Let $A = \{1,2,3,\}$ and $B = \{a,b\}$.
+    \begin{enumerate}
+        \item Is $(3,a) \in A \times B$?
+        \item Is $(3,a) \in A \times A$?
+        \item Is $(3,1) \in A \times A$?
+        \item List all elements of $A \times B$
+        \item List all elements of $A \times A$
+        \item What does it mean for $(x,y)$ to not be in $C \times D$?
+    \end{enumerate}
+\end{frame}
+
+\begin{frame}{Progress Check 5.23}
+    Let $A = \{1,2,3\}$, $T = \{1,2\}$, $B = \{a,b\}$, and $C = \{a,c\}$. Use the roster method to list the elments of each set and describe any relationships you see.
+    \begin{multicols}{2}
+    \begin{enumerate}
+        \item $A \times B$
+        \item $T \times B$
+        \item $A \times C$
+        \item $A \times (B \cap C)$
+        \item $(A \times B) \cap (A \times C)$
+        \item $A \times (B \cup C)$
+        \item $(A \times B) \cup (A \times C)$
+        \item $A \times (B - C)$
+        \item $(A \times B) - (A \times C)$
+        \item $B \times A$
+    \end{enumerate}
+    \end{multicols}
+\end{frame}
+
+\begin{frame}{Progress Check 5.24}
+    For
+    \[
+    A = [0,2] \;\;\; T = (1,2) \;\;\; B = [2,4) \;\;\; C = (3,5]
+    \]
+    Draw a graph of each of the following subsets of the Cartesian plane and
+write each subset using set builder notation.  List any relationships.
+\begin{multicols}{2}
+    \begin{enumerate}
+        \item $A \times B$
+        \item $T \times B$
+        \item $A \times C$
+        \item $A \times (B \cap C)$
+        \item $(A \times B) \cap (A \times C)$
+        \item $A \times (B \cup C)$
+        \item $(A \times B) \cup (A \times C)$
+        \item $A \times (B - C)$
+        \item $(A \times B) - (A \times C)$
+        \item $B \times A$
+    \end{enumerate}
+    \end{multicols}
+\end{frame}
+
+\begin{frame}[t]{Class Activity}
+    If time allows, prove Theorem 5.25, Part (7): If $T \subseteq A$, then $T \times B \subseteq A \times B$
+\end{frame}
+
+\end{document}
+
+

@@ -1,0 +1,197 @@
+\documentclass{beamer}
+\usetheme{CambridgeUS}
+
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{amsthm}
+\usepackage{tikzsymbols}
+\usepackage{parskip}
+
+%\newtheorem{theorem}{Theorem}[section]
+%\newtheorem{corollary}{Corollary}[theorem]
+%\newtheorem{lemma}[theorem]{Lemma}
+%\theoremstyle{definition}
+%\newtheorem{definition}{Definition}[section]
+\newtheorem{prop}[theorem]{Proposition}
+
+%Information to be included in the title page:
+\title{Section 3.1}
+\subtitle{Introduction to Proofs}
+\author{Dr. Ryan Johnson}
+\institute{Grace College}
+\date{Spring 2021}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\begin{frame}[plain]
+    \maketitle
+\end{frame}
+
+\begin{frame}{The Jesus Creed}
+\Large{
+"Hear, O Israel, the Lord our God, the Lord is one.\\
+You shall love the Lord your God\\
+\;\; with all your heart, with all your soul,\\
+\;\; with all your mind, and with all your strength.\\
+The second is this: Love your neighbor as yourself.\\
+There is no commandment greater than these."
+}
+\end{frame}
+
+\begin{frame}{Preview Activity 1: Definitions of Divides, Divisor, Multiple}
+\begin{definition}
+	A nonzero integer $m$ \textbf{divides} an integer $n$ provided that there is
+	an integer q such that $n = m \cdot q$. We also say that m is a \textbf{divisor} of n, m is
+	a \textbf{factor} of n, and n is a \textbf{multiple} of m. The integer 0 is not a divisor of any
+	integer. If a and b are integers and $a \neq 0$, we frequently use the notation $a \; | \; b$
+	as a shorthand for ``a divides b.''
+\end{definition}
+\begin{enumerate}
+	\item Give three different examples of three integers where the first integer divides the second integer and the second integer divides the third integer\pause
+	\[3, 6, 30 \hspace{.5 in} 6 = 2 \cdot 3,\; 30 = 5 \cdot 6 \] \pause \vspace{-.1 in}
+	\item In your examples in Part (1), is there any relationship between the first and the third integer?  Write your conjecture in the form of a conditional statement with appropriate quantifiers. \pause
+	\[
+		(\forall a \in \mathbb{Z})(\forall b \in \mathbb{Z})(\forall c \in \mathbb{Z})((a\;|\;b) \wedge (b\;|\;c) \to (a \;|\; c))
+	\]
+\end{enumerate}
+\end{frame}
+
+\begin{frame}{Preview Activity 1: Definitions of Divides, Divisor, Multiple}
+	\begin{enumerate}
+		\setcounter{enumi}{2}
+		\item Give several examples of two integers where the first integer does not divide the second integer. \pause
+		\[
+		2,3 \hspace{.5 in} 4,6 \hspace{.5 in} 12,16
+		\]
+		\pause \vspace{-.3 in}
+		\item According to the definition of ``divides,'' does the integer 10 divide the integer 0?  That is, is 10 a divisor of 0?  Explain. \pause
+		\begin{center}
+			Yes, because $10 \cdot 0 = 0$. \pause
+		\end{center}
+		\item Use the definition of ``divides'' to complete the following in symbolic form: ``The nonzero integer m does not divide the integer n means that...'' \pause
+		\[
+			\forall k \in \mathbb{Z}, n \neq m \cdot k
+		\]
+		\pause \vspace{-.3 in}
+		\item Use the definition of ``divides'' to complete the following without using symbols for quantifiers: ``The nonzero integer m does not divide the integer n means that...'' \pause
+		\begin{center}
+			For all integers $k$, $n \neq m \cdot k$.
+		\end{center}
+	\end{enumerate}
+\end{frame}
+
+\begin{frame}{Preview Activity 2: A Proposition about Multiples of 3}
+	\begin{enumerate}
+		\item Multiply several pairs of integer where at least one of the integers is a multiple of 3.\pause
+		\[2 \cdot 3 = 6 \hspace{.5 in} 6 \cdot 5 = 30 \hspace{.5 in} 9 \cdot 8 = 72\]
+		\pause \vspace{-.3 in}
+		\item Do your examples in Part (1) support the following proposition or prove the proposition false?  Explain.
+		\begin{prop}
+			For all integers $m$ and $n$, if $m$ is a multiple of 3, then $m \cdot n$ is a multiple of 3. \pause
+		\end{prop}
+		\item Write the conditional statement in the proposition in symbolic form. \pause
+		\[
+		(\forall m \in \mathbb{Z})(\forall n \in \mathbb{Z})(\;(3 \; | \; m) \to (3 \; | \; mn))
+		\]
+	\end{enumerate}
+\end{frame}
+
+\begin{frame}{Preview Activity 2: A Proposition about Multiples of 3}
+	\begin{enumerate}
+		\setcounter{enumi}{3}
+		\item What is the hypothesis of the conditional statement?  What is the conclusion?\\[.1 in] \pause
+		Hypothesis: ``m is a multiple of 3''\\Conclusion: ``mn is a multiple of 3.''
+		\item What is the definition of a multiple of 3? \pause
+		\begin{center}
+			$x \in \mathbb{Z}$ is a multiple of 3 if there exists a $y \in mathbb{Z}$ such that $x = 3y$.
+		\end{center}
+		\pause
+		\item Construct a know-show table for this proposition.
+	\end{enumerate}
+\end{frame}
+
+\begin{frame}{Preview Activity 2: A Proposition about Multiples of 3}
+	\begin{tabular}{|l|p{2.5 in}|p{1 in}|}
+		\hline
+		P & Let $m, n \in \mathbb{Z}$ such that m is a multiple of 3. & Hypothesis\\ \hline
+		& & \\ \hline
+		& & \\ \hline
+		& & \\ \hline
+		Q & mn is a multiple of 3 & \\ \hline
+	\end{tabular}
+\end{frame}
+
+\begin{frame}{Preview Activity 3, part 1}
+	Suppose that it is currently Tuesday.
+	\begin{enumerate}
+		\item What day will it be 3 days from now?\pause
+		\item What day will it be 10 days from now?\pause
+		\item What day will it be 17 days from now? What day will it be 24 days
+		from now? \pause
+		\item Find several other natural numbers x such that it will be Friday x days
+		from now.
+		\item Create a list (in increasing order) of the numbers 3; 10; 17; 24, and the
+		numbers you generated in Part (4). Pick any two numbers from this
+		list and subtract one from the other. Repeat this several times. \pause
+		\item What do the numbers you obtained in Part (5) have in common?
+	\end{enumerate}
+\end{frame}
+
+\begin{frame}{Preview Activity 3, part 2}
+	Suppose that we are using a twelve-hour clock with no distinction between
+	a.m. and p.m. Also, suppose that the current time is 5:00.
+	\begin{enumerate}
+		\item What time will it be 4 hours from now?\pause
+		\item What time will it be 16 hours from now? What time will it be 28 hours
+		from now? \pause
+		\item Find several other natural numbers x such that it will be 9:00 x hours
+		from now.\pause
+		\item Create a list (in increasing order) of the numbers 4; 16; 28, and the
+		numbers you generated in Part (3). Pick any two numbers from this
+		list and subtract one from the other. Repeat this several times. \pause
+		\item What do the numbers you obtained in Part (4) have in common?
+	\end{enumerate}
+\end{frame}
+
+\begin{frame}{Preview Activity 3, part 3}
+	This is a continuation of Part 1. Suppose that it is currently Tuesday.
+	\begin{enumerate}
+		\item What day was it 4 days ago?\pause
+		\item What day was it 11 days ago? What day was it 18 days ago? \pause
+		\item Find several other natural numbers x such that it was Friday x days
+		ago. \pause
+		\item Create a list (in increasing order) consisting of the numbers
+		$-18, -11, -4$, the opposites of the numbers you generated in Part (3c)
+		and the positive numbers in the list from Part (1e). Pick any two numbers
+		from this list and subtract one from the other. Repeat this several
+		times. \pause
+		\item What do the numbers you obtained in Part (4) have in common?
+	\end{enumerate}
+\end{frame}
+
+\begin{frame}{Progress Check 3.2: A Property of Divisors}
+	\begin{enumerate}
+		\item Give at least four different examples of integers a, b, and c with $a \neq 0$ such
+		that a divides b and a divides c.\\[.1 in]\pause
+		\item For each example in Part (1), calculate the sum $b+c$. Does the integer a
+		divide the sum $b + c$?\\[.1 in]\pause
+		\item Formulate a conjecture converning the relationship between the integer a and the sum $b+c$.\\[.1 in]\pause
+		\item Construct a know-show table for a proof of the conjecture in part (3).
+	\end{enumerate}
+\end{frame}
+
+\begin{frame}{Progress Check 3.2: A Property of Divisors}
+	\begin{tabular}{|l|p{2.5 in}|p{1.5 in}|}
+		\hline
+		P & Let a,b, and c be integers such that a divides b and a divides c & Hypothesis\\ \hline
+		&&\\\hline
+		&&\\\hline
+		&&\\\hline
+		&&\\\hline
+		Q & a divides $b+c$. & \\ \hline
+	\end{tabular}
+\end{frame}
+
+\end{document}
+
+

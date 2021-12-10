@@ -1,0 +1,79 @@
+ \documentclass[12pt]{article}
+\pagestyle{myheadings}
+\usepackage{graphicx}
+
+%Enter your name, the portfolio problem number, and the draft number.
+\title{Johnson Problem 1 -- Draft 1}
+\author{Ryan Johnson}
+
+%Enter your name, the portfolio problem number, and the draft number.  This will be a heading on pages after the first page.
+\markright{Ryan Johnson Problem 1 -- Draft 1}
+
+
+\usepackage{amsmath,amssymb,amsthm,amsfonts,graphics}
+
+%The following commands allow us to typeset theorems, propositions, definitions, etc.
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem*{definition}{Definition}
+
+\renewcommand{\qedsymbol}{\ensuremath{\blacksquare}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+
+
+\begin{document}
+\maketitle
+
+%Enter your email address.
+\begin{center}
+\textbf{email address: johnsor@grace.edu}
+\end{center}
+
+\begin{proposition}
+If $a$ and $b$ are odd integers, then $a \cdot b$ is an odd integer.
+\end{proposition}
+
+\begin{proof}
+We assume that $a$ and $b$ are odd integers and will prove that $a \cdot b$ is also an odd integer.  Since $a$ and $b$ are odd integers, there exist integers $m$ and $n$ such that
+\[
+a = 2m + 1 \text{ ~~~~~~and~~~~~ } b = 2n + 1.
+\]
+Substitution and algebra give us
+\begin{align*}
+ab &= (2m + 1)(2n + 1) \\
+    &= 4mn + 2m + 2n + 1 \\
+    &= 2(mn + m + n) + 1
+\end{align*}
+Let $k = mn + m + n$.  We see that $k$ is an integer by the closure of addition and multiplication in the integers.  Substituting yet again yields $ab = 2k+1$.  Thus, $ab$ is an odd integer by definition.  We have shown that if $a$ and $b$ are odd integers, then $ab$ is also an odd integer.
+\end{proof}
+
+
+\newpage
+
+You can take a picture of any drawings you do and upload them using the 
+
+\includegraphics[width=2in]{an_upload.png}
+
+button.  Then use them with the code above.
+
+\newpage
+
+This is an example of how to do a know-show table:
+
+\begin{tabular}{|c|c|c|}
+    \hline
+    P & $a$ and $b$ are odd integers & Hypothesis  \\ \hline
+     & & \\ \hline
+     & & \\ \hline
+     Q & $a \cdot b$ is an odd integer & Definition of an odd integer. \\ \hline
+\end{tabular}
+
+\end{document}
+
+

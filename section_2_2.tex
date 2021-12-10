@@ -1,0 +1,272 @@
+\documentclass{beamer}
+\usetheme{CambridgeUS}
+
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{amsthm}
+\usepackage{tikzsymbols}
+\usepackage{parskip}
+\usepackage{multicol}
+
+%\newtheorem{theorem}{Theorem}[section]
+%\newtheorem{corollary}{Corollary}[theorem]
+%\newtheorem{lemma}[theorem]{Lemma}
+%\theoremstyle{definition}
+%\newtheorem{definition}{Definition}[section]
+\newtheorem{prop}[theorem]{Proposition}
+
+%Information to be included in the title page:
+\title{Section 2.2}
+\subtitle{Introduction to Proofs}
+\author{Dr. Ryan Johnson}
+\institute{Grace College}
+\date{Spring 2021}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\begin{frame}[plain]
+    \maketitle
+\end{frame}
+
+\begin{frame}{The Jesus Creed}
+\Large{
+"Hear, O Israel, the Lord our God, the Lord is one.\\
+You shall love the Lord your God\\
+\;\; with all your heart, with all your soul,\\
+\;\; with all your mind, and with all your strength.\\
+The second is this: Love your neighbor as yourself.\\
+There is no commandment greater than these."
+}
+\end{frame}
+
+\begin{frame}{Preview Activity 1: Logically Equivalent Statements}
+	\begin{definition}
+		Two expressions are \textbf{logically equivalent} provided that they have
+		the same truth value for all possible combinations of truth values for all variables
+		appearing in the two expressions. In this case, we write $X \equiv Y$ and say
+		that X and Y are logically equivalent.
+	\end{definition}
+	1. Complete the truth tables for $\neg (P \wedge Q)$ and $\neg P \vee \neg Q$. \pause
+	
+	\begin{center}
+		\begin{tabular}{lr}
+			\begin{tabular}{|l|l|l|l|}
+				\hline
+				P & Q & $P \wedge Q$ & $\neg (P \wedge Q)$\\ \hline
+				T&T&& \\ \hline
+				T&F&& \\ \hline
+				F&T&& \\ \hline
+				F&T&& \\ \hline
+			\end{tabular}
+			&
+			\begin{tabular}{|l|l|l|l|l|}
+				\hline
+				P & Q & $\neg P$ & $\neg Q$ & $\neg P \vee \neg Q$\\ \hline
+				T&T&&& \\ \hline
+				T&F&&& \\ \hline
+				F&T&&& \\ \hline
+				F&F&&& \\ \hline
+			\end{tabular}
+		\end{tabular}
+	\end{center}
+	\pause
+	2. Are the expressions $\neg (P \wedge Q)$ and $\neg P \vee \neg Q$ logically equivalent?
+\end{frame} 
+
+\begin{frame}{Preview Activity 1: Logically Equivalent Statements}
+	\begin{definition}
+		Two expressions are \textbf{logically equivalent} provided that they have
+		the same truth value for all possible combinations of truth values for all variables
+		appearing in the two expressions. In this case, we write $X \equiv Y$ and say
+		that X and Y are logically equivalent.
+	\end{definition}
+	3. Suppose that the statement ``I will play golf and I will mow the lawn'' is false.
+	Then its negation is true. Write the negation of this statement in the form of
+	a disjunction. Does this make sense?\\[.1 in] \pause
+	
+	``I will not play golf or I will not mow the lawn.''
+\end{frame}
+
+%\begin{frame}{Preview Activity 1: Conditional Statements}
+%	Imagine a parent making the following two statements.\\[.1 in]
+%	\begin{tabular}{lp{3 in}}
+%		Statement 1: & If you do not clean your room, then you cannot watch TV.\\
+%		Statement 2: & You clean your room or you cannot watch TV.
+%	\end{tabular}
+%	\begin{enumerate}
+%		\item[4] Do these two statements mean the same thing? Explain.\\[2 in]
+%	\end{enumerate}
+%\end{frame}
+
+\begin{frame}{Preview Activity 1: Conditional Statements}
+	Imagine a parent making the following two statements.
+	
+	\begin{tabular}{lp{3 in}}
+		Statement 1: & If you do not clean your room, then you cannot watch TV.\\
+		Statement 2: & You clean your room or you cannot watch TV.
+	\end{tabular}
+	\begin{enumerate}
+		\item[4.] Let $P$ be ``you do not clean your room,” and let Q be “you cannot watch TV.''
+		Use these to translate Statement 1 and Statement 2 into symbolic forms.\\[.1 in] \pause
+		\item[5.] Construct a truth table for each of the expressions you determined in 2.
+		Are the expressions logically equivalent? \pause
+	\end{enumerate}
+	\begin{center}
+		\begin{tabular}{lr}
+			\begin{tabular}{|l|l|l|}
+				\hline
+				P & Q & $P \to Q$\\ \hline
+				T&T& \\ \hline
+				T&F& \\ \hline
+				F&T& \\ \hline
+				F&T& \\ \hline
+			\end{tabular}
+			&
+			\begin{tabular}{|l|l|l|l|}
+				\hline
+				P & Q & $\neg P$ & $\neg P \vee Q$\\ \hline
+				T&T&& \\ \hline
+				T&F&& \\ \hline
+				F&T&& \\ \hline
+				F&F&& \\ \hline
+			\end{tabular}
+		\end{tabular}
+	\end{center}
+\end{frame}
+
+\begin{frame}{Preview Activity 3: Conditional Statements}
+	Imagine a parent making the following two statements.
+	
+	\begin{tabular}{lp{3 in}}
+		Statement 1: & If you do not clean your room, then you cannot watch TV.\\
+		Statement 2: & You clean your room or you cannot watch TV.
+	\end{tabular}
+	\begin{enumerate}
+		\item[6.] Assume that Statement 1 and Statement 2 are false. In this case, what is
+		the truth value of P and what is the truth value of Q? Now, write a true
+		statement in symbolic form that is a conjunction and involves P and Q.
+	\end{enumerate}
+\end{frame}
+
+\begin{frame}{Preview Activity 3: Conditional Statements}
+	Imagine a parent making the following two statements.
+	
+	\begin{tabular}{lp{3 in}}
+		Statement 1: & If you do not clean your room, then you cannot watch TV.\\
+		Statement 2: & You clean your room or you cannot watch TV.
+	\end{tabular}
+	\begin{enumerate}
+		\item[7.] Write a truth table for the (conjunction) statement in Part 4. and compare it
+		to a truth table for $\neg(P \to Q)$.  What do you observe? \pause
+	\end{enumerate}
+\begin{center}
+	\begin{tabular}{lr}
+		\begin{tabular}{|l|l|l|l|}
+			\hline
+			P & Q & $\neg Q$ & $P \wedge \neg Q$\\ \hline
+			T&T&& \\ \hline
+			T&F&& \\ \hline
+			F&T&& \\ \hline
+			F&T&& \\ \hline
+		\end{tabular}
+		&
+		\begin{tabular}{|l|l|l|l|}
+			\hline
+			P & Q & $P \to Q$ & $\neg ( P \to Q)$\\ \hline
+			T&T&& \\ \hline
+			T&F&& \\ \hline
+			F&T&& \\ \hline
+			F&F&& \\ \hline
+		\end{tabular}
+	\end{tabular}
+\end{center}
+\end{frame}
+
+\begin{frame}{Preview Activity 2: Converse and Contrapositive}
+	\begin{definition}
+		The \textbf{converse} of the conditional statement $P \to Q$ is the conditional
+		statement $Q \to P$.\\
+		
+		The \textbf{contrapositive} of the conditional statement $P \to Q$ is the conditional
+		statement $\neg Q \to \neg  P$.
+	\end{definition}
+	\begin{enumerate}
+		\item For the following, the variable x represents a real number. Label each of the
+		following statements as true or false.
+		\begin{multicols}{2}
+			\begin{enumerate}
+				\item[a.] If $x = 3$, then $x^2 = 9$.
+				\item[b.] If $x^2 = 9$, then $x = 3$.
+				\item[c.] If $x^2 \not = 9$, then $x \not = 3$.
+				\item[d.] If $x \not = 3$, then $x^2 \not = 9$. \pause
+			\end{enumerate}
+		\end{multicols}
+		\item Which statement in the list of conditional statements in (1) is the converse
+		of Statement 1a? Which is the contrapositive?
+	\end{enumerate}
+\end{frame}
+
+
+
+\begin{frame}{Notes}
+	\begin{itemize}
+		\item Theorem 2.5 (De Morgan's Laws) is really important.\\[.2 in] \pause
+		\item Logical Equivalences of Conditional Statements.\\[.2 in] \pause
+		\item p46 - words in bold: ``The negation of a conditional statement is not another conditional statement.''\\[.2 in] \pause
+		\item Methods of Establishing Logical Equivalences\\[.2 in] \pause
+		\item Check Moodle for Logical Equivalencies PDF.
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Progress Check 2.8: Working with Logical Equivalency}
+	\begin{enumerate}
+		\item Although it is possible to use truth tables to show that $P \to (Q \vee R)$ is
+		logically equivalent to $(P \vee \neg Q) \to R$, we instead use previously proven
+		logical equivalencies to prove this logical equivalency. In this case, it may
+		be easier to start working with $(P \wedge \neg Q) \to R$.  Start with
+		\[
+		(P \wedge \neg Q) \to R \equiv \neg (P \wedge \neg Q) \vee R,
+		\]
+		which is justified by the logical equivalency established in Preview Activity 3-3. Continue by using one of De Morgan’s Laws on $\neg (P \wedge \neg Q)$.
+	\end{enumerate}
+	\vspace{2 in}
+\end{frame}
+
+\begin{frame}{Progress Check 2.8: Working with Logical Equivalency}
+	\begin{enumerate}
+		\item[2.] Let a and b be integers. Suppose we are trying to prove the following:
+		\begin{itemize}
+			\item If 3 is a factor of $a \cdot b$, then 3 is a factor of a or 3 is a factor of b.
+		\end{itemize}
+		Explain why we will have proven this statement if we prove the following:
+		\begin{itemize}
+			\item If 3 is a factor of $a \cdot b$ and 3 is not a factor of a, then 3 is a factor of b.
+		\end{itemize}
+	\end{enumerate}
+	\vspace{2 in}
+\end{frame}
+
+\begin{frame}{Activity 2.10: Working with Logical Equivalency}
+	Suppose we are trying to prove the
+	following for integers x and y:
+	\begin{center}
+		If $x \cdot y$ is even, then x is even or y is even.
+	\end{center}
+	We notice that we can write this statement in the following symbolic form:
+	\[
+	P \to (Q \vee R),
+	\]
+	where P is ``$x \cdot y$ is even.'' Q is ``x is even.'' and R is ``y is even.''
+	\begin{enumerate}
+		\item Manipulate the symbolic form using contrapositive and De Morgan's Laws.\\[.5 in]\pause
+		\item Explain why the answer to part 1 is
+		\begin{center}
+			If x is odd and y is odd, then $x \cdot y$ is odd. \pause
+		\end{center}
+		Hey!  We already proved this!  It's Theorem 1.6 in Section 1.2.
+	\end{enumerate}
+\end{frame}
+
+\end{document}
+
+

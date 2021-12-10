@@ -1,0 +1,157 @@
+\documentclass{beamer}
+\usetheme{CambridgeUS}
+
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{amsthm}
+\usepackage{tikzsymbols}
+\usepackage{parskip}
+
+%These for for continuing numbering between frames
+\newcounter{saveenumi}
+\newcommand{\seti}{\setcounter{saveenumi}{\value{enumi}}}
+\newcommand{\conti}{\setcounter{enumi}{\value{saveenumi}}}
+
+%\newtheorem{theorem}{Theorem}[section]
+%\newtheorem{corollary}{Corollary}[theorem]
+%\newtheorem{lemma}[theorem]{Lemma}
+%\theoremstyle{definition}
+%\newtheorem{definition}{Definition}[section]
+\newtheorem{prop}[theorem]{Proposition}
+
+%Information to be included in the title page:
+\title{Section 3.3}
+\subtitle{Introduction to Proofs}
+\author{Dr. Ryan Johnson}
+\institute{Grace College}
+\date{Spring 2021}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\begin{frame}[plain]
+    \maketitle
+\end{frame}
+
+\begin{frame}{The Jesus Creed}
+\Large{
+"Hear, O Israel, the Lord our God, the Lord is one.\\
+You shall love the Lord your God\\
+\;\; with all your heart, with all your soul,\\
+\;\; with all your mind, and with all your strength.\\
+The second is this: Love your neighbor as yourself.\\
+There is no commandment greater than these."
+}
+\end{frame}
+
+\begin{frame}{Preview Activity 1}
+    \begin{enumerate}
+        \item Truth tables to explain why $(P \vee \neg P$ is a tautology and $(P \wedge \neg P)$ is a contradiction. \pause
+        
+        \begin{tabular}{l r}
+             \begin{tabular}{| c | c | c |}
+                \hline
+                 P & $\neg P$ & $P \vee \neg P$ \\ \hline
+                 T & F & T \\ \hline
+                 F & T & T \\ \hline
+             \end{tabular} &
+             \begin{tabular}{| c | c | c |}
+                \hline
+                 P & $\neg P$ & $P \wedge \neg P$ \\ \hline
+                 T & F & F\\ \hline
+                 F & T & F \\ \hline
+             \end{tabular}
+        \end{tabular} \pause
+        \item Truth table to show that $\neg ( P \to Q)$ is equivalent to $P \wedge \neg Q$ \pause
+        
+        \begin{tabular}{| c | c | c | c | c | c |}
+            \hline
+            P & Q & $P \to Q$ & $\neg(P \to Q)$ & $\neg Q$ & $P \wedge \neg Q$ \\ \hline
+            T & T & T & F & F & F \\ \hline
+            T & F & F & T & T & T \\ \hline
+            F & T & T & F & F & F \\ \hline
+            F & F & T & F & T & F \\ \hline
+        \end{tabular}
+        \seti
+    \end{enumerate}
+\end{frame}
+
+\begin{frame}{Preview Activity 1}
+    \begin{enumerate}
+        \conti
+        \item Counterexample for
+        \[
+        \text{For each real number } x, \; \frac{1}{x(1-x)} \geq 4.
+        \] \pause
+        If $x = 2$, then $\frac{1}{x(1-x)} = -\frac{1}{2} \not \geq 4$. \pause
+        \item Carefully write down all assumptions made at the beginning of a proof by contradiction of the statement
+        \[
+        \text{For each real number $x$, if $0 < x < 1$, then } \frac{1}{x(1-x)} \geq 4.
+        \] \pause
+        \[
+        \text{Assume there exists a number $x$ such that } 0 < x < 1 \text{ and } \frac{1}{x(1-x)} < 4
+        \]
+    \end{enumerate}
+\end{frame}
+
+\begin{frame}{Preview Activity 2}
+    \begin{enumerate}
+        \item For all real numbers x and y, if $x \neq y$, $x >0$, and $y > 0$, then
+        \begin{align*}
+            \onslide<1->{\frac{x}{y} + \frac{y}{x} &\leq 2 \\ }
+            \onslide<2->{y^2 + x^2 &\leq 2xy \\ }
+            \onslide<3->{y^2 - 2xy + x^2 &\leq 0 \\ }
+            \onslide<4->{(y-x)^2 & \leq 0 }
+        \end{align*}
+        \onslide<5->{\item Why is this a contradiction?}
+        \onslide<6>{Because $z^2 \leq 0$ if and only if $z = 0$.  But if $x-y=0$, then $x = y$.  But this contradicts one of our assumptions.}
+    \end{enumerate}
+\end{frame}
+
+\begin{frame}{Progress Check 3.15}
+    Writing Guideline: Keep the Reader Informed (p 119)\\
+    
+    Negate the following sentences \pause
+    \begin{enumerate}
+        \item For each real number x, if x is irrational, then $\sqrt[3]{x}$ is irrational. \pause
+        \item For each real number x, $(x + \sqrt{2}$ is irrational or $(-x + \sqrt{2}$ is irrational. \pause
+        \item For all integers a and b, if 5 divides ab, then 5 divides a or b. \pause
+        \item For all real numbers a and b, if $a > 0$ and $b >0$, then $\frac{2}{a} + \frac{2}{b} \neq \frac{4}{a+b}$
+    \end{enumerate}
+\end{frame}
+
+\begin{frame}{Progress Check 3.16}
+    Important Note on page 120\\
+    
+    For each integer n, if $n \equiv 2 \mod 4$, then $n \not \equiv 3 \mod{6}$
+    \begin{enumerate}
+        \item Determine at least five different integers that are congruent to 2 modulo 4, and determine at least five different integers that are congruent to 3 modulo 6.  Are there any integers that are in both of these lists? \pause
+        \item For this proposition, why does it seem reasonable to try a proof by contradiction? \pause
+        \item For this proposition, state clearly the assumptions that need to be made at the beginning of a proof by contradiction, and then use a proof by contradiction to prove this proposition.
+    \end{enumerate}
+\end{frame}
+
+\begin{frame}{3.18}
+    \begin{prop}[Proposition 3.17]
+    For all integers x and y, if x and y are odd integers, then there does not exist an integer z such that $x^2 + y^2 = z^2$.
+    \end{prop}
+    If time allows, prove this statement
+\end{frame}
+
+\begin{frame}{Rational and Irrational}
+    \begin{definition}
+    A real number x is defined to be a \textbf{rational number} provided that there exists integers m and n with $n \neq 0$ such that $x = \frac{m}{n}$.  A real number that is not a rational number is called \textbf{irrational}.
+    \end{definition}
+    
+    \begin{prop}[3.19]
+        For all real numbers x and y, if x is rational and $x \neq 0$ and y is irrational, then xy is irrational.
+    \end{prop}
+    
+    \begin{theorem}
+    If r is a real number such that $r^2 = 2$, then r is an irrational number.
+    \end{theorem}
+\end{frame}
+
+\end{document}
+
+

@@ -1,0 +1,105 @@
+\documentclass{beamer}
+\usetheme{CambridgeUS}
+
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{amsthm}
+\usepackage{tikzsymbols}
+\usepackage{parskip}
+
+%\newtheorem{theorem}{Theorem}[section]
+%\newtheorem{corollary}{Corollary}[theorem]
+%\newtheorem{lemma}[theorem]{Lemma}
+%\theoremstyle{definition}
+%\newtheorem{definition}{Definition}[section]
+\newtheorem{prop}[theorem]{Proposition}
+
+%Information to be included in the title page:
+\title{Section 3,2}
+\subtitle{Introduction to Proofs}
+\author{Dr. Ryan Johnson}
+\institute{Grace College}
+\date{Spring 2021}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\begin{frame}[plain]
+    \maketitle
+\end{frame}
+
+\begin{frame}{The Jesus Creed}
+\Large{
+"Hear, O Israel, the Lord our God, the Lord is one.\\
+You shall love the Lord your God\\
+\;\; with all your heart, with all your soul,\\
+\;\; with all your mind, and with all your strength.\\
+The second is this: Love your neighbor as yourself.\\
+There is no commandment greater than these."
+}
+\end{frame}
+
+\begin{frame}{Preview Activity 1}
+    Original statement proven in Section 1.2 exercise 3c. \par
+    If n is an odd integer, then $n^2$ is an odd integer.\par
+    New proposition \par
+    For each integer $n$, if $n^2$ is an odd integer, then $n$ is an odd integer. \par
+    \begin{enumerate}
+    \pause
+        \item Do you think it's true or false? \pause \;\; Answers may vary. \pause
+        \item Know-show table.  \pause \;\; Trick question.  This should have been impossible. :-) \pause
+        \item Write the contrapositive \pause \par
+        For each integer $n$, if $n$ is even, then $n^2$ is even.
+    \end{enumerate}
+\end{frame}
+
+\begin{frame}{Preview Activity 1}
+    \begin{tabular}{| l | l | l |}
+        \hline
+        Step & Know & Reason \\ \hline
+        P & $n$ is an even integer & Hypothesis \\ \hline
+        & & \\ \hline
+        & & \\ \hline
+        & & \\ \hline
+        & & \\ \hline
+        & & \\ \hline
+        Q & $n^2$ is an even integer & Definition of an even integer \\ \hline
+    \end{tabular}
+    \pause
+    
+    Since we proved the contrapostive, the original statement is also proved!
+\end{frame}
+
+\begin{frame}{Preview Activity 2}
+    \begin{enumerate}
+        \item Already did this one as a class activity
+        \item So how do we prove a $P \leftrightarrow Q$ statement? \pause \; \; Break the proof into two parts.  First prove $P \to Q$, and then prove $Q \to P$.
+        \item Have we proven \par
+        For each integer n, n is an odd integer if and only if $n^2$ is an odd integer? \pause \par
+        Yes!  Explanations may vary.
+    \end{enumerate}
+\end{frame}
+
+\begin{frame}{Progress Check 3.8}
+    Note: writing guidelines on page 105 \pause \par
+    
+    \begin{enumerate}
+        \item In English, write the contrapositive of ``For all real numbers a and b, if $a \neq 0$ and $b \neq 0$, then $ab \neq 0$''.
+        
+        \pause
+        Theorem 2.8 on page 48 says
+        \[
+        X \to (Y \vee Z) \equiv (X \wedge \neg Y) \to Z
+        \]
+        \pause
+        \item Use the theorem above to write your answer to \#1 into an equivalent statement. \pause
+        \item Prove the proposition.  Write your finished product on a whiteboard.
+    \end{enumerate}
+\end{frame}
+
+\begin{frame}{In class}
+    Section 3.2 \#4
+\end{frame}
+
+\end{document}
+
+

@@ -1,0 +1,262 @@
+\documentclass{beamer}
+\usetheme{CambridgeUS}
+
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{amsthm}
+\usepackage{tikzsymbols}
+\usepackage{parskip}
+
+%\newtheorem{theorem}{Theorem}[section]
+%\newtheorem{corollary}{Corollary}[theorem]
+%\newtheorem{lemma}[theorem]{Lemma}
+%\theoremstyle{definition}
+%\newtheorem{definition}{Definition}[section]
+\newtheorem{prop}[theorem]{Proposition}
+
+%Information to be included in the title page:
+\title{Section 2.4}
+\subtitle{Introduction to Proofs}
+\author{Dr. Ryan Johnson}
+\institute{Grace College}
+\date{Spring 2021}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\begin{frame}[plain]
+    \maketitle
+\end{frame}
+
+\begin{frame}{The Jesus Creed}
+\Large{
+"Hear, O Israel, the Lord our God, the Lord is one.\\
+You shall love the Lord your God\\
+\;\; with all your heart, with all your soul,\\
+\;\; with all your mind, and with all your strength.\\
+The second is this: Love your neighbor as yourself.\\
+There is no commandment greater than these."
+}
+\end{frame}
+
+\begin{frame}{Preview Activity 1}
+    \begin{enumerate}
+        \item $(\forall a \in \mathbb{R}) (a + 0 = a)$. \pause \hspace{.5 in} True \pause
+        \item $3x - 5 = 9$ \pause \hspace{.5 in} $\{\frac{14}{3}\}$  \pause
+        \item $\sqrt{x} \in \mathbb{R}$. \pause \hspace{.5 in} $\{x \in \mathbb{R} \; | \; x \geq 0\}$   \pause
+        \item $\sin(2x) = 2\sin(x)\cos(x)$ \pause \hspace{.5 in} $\mathbb{R}$  \pause
+        \item $(\forall x \in \mathbb{R})(\sin(2x) = 2\sin(x)\cos(x))$ \pause \hspace{.5 in} True \pause
+        \item $(\exists x \in \mathbb{R})(x^2 + 1 = 0)$ \pause \hspace{.5 in} False \pause
+        \item $(\forall x \in \mathbb{R})(x^3 \geq x^2)$ \pause \hspace{.5 in} False \pause
+        \item $x^2 + 1 = 0$. \pause \hspace{.5 in} $\{ \} = \emptyset$ \pause
+        \item If $x^2 \geq 1$ then $x \geq 1$ \pause \hspace{.5 in} $\{x \in \mathbb{R} \; | \; x \geq -1\}$ \pause
+        \item $(\forall x \in \mathbb{R})$(If $x^2 \geq 1$ then $x \geq 1$) \pause \hspace{.5 in} False
+    \end{enumerate}
+\end{frame}
+
+\begin{frame}{Preview Activity 2: Quantifiers}
+	\begin{enumerate}
+		\item Consider the following statement written in symbolic form:
+		\begin{center}
+			($\forall x \in \mathbb{Z}$)($x$ is even).
+		\end{center}
+		\begin{itemize}
+			\item[a.] Write this statement in English.\\ \pause
+			\begin{center}
+				For every integer, that integer is even.
+			\end{center}
+			\pause
+			\item[b.] Is the statement true or false?  \pause False!  Counterexample: $x=1$. \pause
+			\item[c.] How would you write the negation of this statement as an English sentence? \pause
+			\begin{center}
+				There exists an integer that is odd (not even).
+			\end{center}
+			\pause
+			\item[d.] If possible, write your negation of this statement from part (c) symbolically
+			(using a quantifier).\pause
+			\[
+			(\exists x \in \mathbb{Z})(x \text{ is odd}).
+			\]
+		\end{itemize}
+	\end{enumerate}
+\end{frame}
+
+\begin{frame}{Preview Activity 2: Quantifiers}
+	\begin{enumerate}
+		\item[2.] Consider the following statement written in symbolic form:
+		\begin{center}
+			($\exists x \in \mathbb{Z}$)($x^3$ is greater than zero).
+		\end{center}
+		\begin{itemize}
+			\item[a.] Write this statement in English.\\ \pause
+			\begin{center}
+				There exists an integer $x$ such that $x^3$ is greater than zero.
+			\end{center}
+			\pause
+			\item[b.] Is the statement true or false?  \pause True!  For instance: $x=1 \to x^3 = 1 > 0$. \pause
+			\item[c.] How would you write the negation of this statement as an English sentence? \pause
+			\begin{center}
+				For every integer x, $x^3 \leq 0$.
+			\end{center}
+			\pause
+			\item[d.] If possible, write your negation of this statement from part (c) symbolically
+			(using a quantifier).\pause
+			\[
+			(\forall x \in \mathbb{Z})(x^3 \leq 0).
+			\]
+		\end{itemize}
+	\end{enumerate}
+\end{frame}
+
+%\begin{frame}{Preview Activity 2: Statements with Two Quantifiers}
+%	\[
+%	(\exists x \in \mathbb{R})(x \cdot y = 100).
+%	\]
+%	\begin{enumerate}
+%		\item Explain why this sentence is not a statement\\[.1 in] \pause
+%		\item If 5 is substituted for $y$, is the resulting sentence a statement?  If it is a statement, is it true or %false?\\[.1 in] \pause
+%		\item If $-3$ is substituted for $y$, is the resulting sentence a statement?  If it is a statement, is it true or %false?\\[.1 in] \pause
+%		\item If $\pi$ is substituted for $y$, is the resulting sentence a statement?  If it is a statement, is it true or %false?\\[.1 in] \pause
+%		\item What is the truth set of the sentence? \pause $\{x \in \mathbb{R} | x \neq 0\}$
+%	\end{enumerate}
+%\end{frame}
+
+%\begin{frame}{Preview Activity 2: Statements with Two Quantifiers}
+%	\[
+%	(\forall y \in \mathbb{R})\large((\exists x \in \mathbb{R})(x \cdot y = 100)\large).
+%	\]
+%	\begin{enumerate}
+%		\item[6.a] Is this statement true or false? Explain.\\[.1 in]\pause
+%		\item[6.b] Write this statement in the form of an English sentence. \pause
+%		\begin{center}
+%			For any real number $y$, there exists a real number $x$ such that $x \cdot y = 100$.
+%		\end{center}
+%		\pause
+%		\[
+%		(\exists x \in \mathbb{R})\large((\forall y \in \mathbb{R})(x \cdot y = 100)\large).
+%		\]
+%		
+%		\item[7.a] Is this statement true or false? Explain.\\[.1 in]\pause
+%		\item[7.b] Write this statement in the form of an English sentence.
+%		\begin{center}
+%			There exists a real number $x$ such that for any real number $y$, $x \cdot y = 100$.
+%		\end{center}
+%	\end{enumerate}
+%\end{frame}
+
+\begin{frame}{Progress Check 2.21: Negating Quantified Statements}
+	For each of the following statements
+	\begin{itemize}
+		\item Write the statement in the form of an English sentence that does not use the symbols for quantifiers.
+		\item Write the negation of the statement in a symbolic form that does not use the negation symbol.
+		\item Write the negation of the statement in the form of an English sentence that does not use the symbols for quantifiers.
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Progress Check 2.21.1: Negating Quantified Statements}
+	\[(\forall a \in \mathbb{R})(a + 0 = a)\]
+	\pause
+	\begin{itemize}
+		\item For any real number $a$, $a + 0 = a$.\pause
+		\item \((\exists a \in \mathbb{R})(a + 0 \neq a)\) \pause
+		\item There exists a real number $a$ such that $a + 0 \neq a$.
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Progress Check 2.21.2: Negating Quantified Statements}
+	\[\forall x \in \mathbb{R}, \sin(2x) = 2(\sin x)(\cos x)\]
+	\pause
+	\begin{itemize}
+		\item For any real number $x$, $\sin(2x) = 2(\sin x)(\cos x)$.\pause
+		\item \(\exists x \in \mathbb{R}, \sin(2x) \neq 2(\sin x)(\cos x)\) \pause
+		\item There exists a real number $x$ such that $\sin(2x) \neq 2(\sin x)(\cos x)$.
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Progress Check 2.21.3: Negating Quantified Statements}
+	\[\forall x \in \mathbb{R}, \tan^2 x + 1 = \sec^2 x\]
+	\pause
+	\begin{itemize}
+		\item For any real number $x$, $\tan^2 x + 1 = \sec^2 x$.\pause
+		\item \(\exists x \in \mathbb{R}, \tan^2 x + 1 \neq \sec^2 x\) \pause
+		\item There exists a real number $x$ such that $\tan^2 x + 1 \neq \sec^2 x$.
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Progress Check 2.21.4: Negating Quantified Statements}
+	\[\exists x \in \mathbb{Q}, x^2 - 3x - 7 = 0\]
+	\pause
+	\begin{itemize}
+		\item There exists a rational number $x$ such that $x^2 - 3x - 7 = 0$.\pause
+		\item \(\forall x \in \mathbb{Q}, x^2 - 3x - 7 \neq 0\) \pause
+		\item For any rational number $x$, $x^2 - 3x - 7 \neq 0$.
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Progress Check 2.21.5: Negating Quantified Statements}
+	\[\exists x \in \mathbb{R}, x^2 + 1 = 0\]
+	\pause
+	\begin{itemize}
+		\item There exists a real number $x$ such that $x^2 +1 = 0$.\pause
+		\item \(\forall x \in \mathbb{R}, x^2 +1 \neq 0\) \pause
+		\item For any real number $x$, $x^2 +1 \neq 0$.
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Progress Check 2.22: Using Counterexamples}
+	\begin{enumerate}
+		\item For each integer $n$, $(n^2 + n + 1)$ is a prime number.\\[.1 in] \pause
+		Counterexample: if $n = 4$, then $n^2 + n + 1 = 21 = 7 \cdot 3$, and thus, is not prime. \pause
+		\item For each real number $x$, $2x^2 > x$.\\[.1 in]\pause
+		Counterexample: If $x = 0.1$, then $2x^2 = 0.02 \not > 0.1 = x$.
+	\end{enumerate}
+\end{frame}
+
+\begin{frame}{Progress Check 2.23}
+	\begin{definition}
+		An integer $n$ is a multiple of 3 provided that there exists an integer
+		$k$ such that $n = 3k$.
+	\end{definition}
+	\pause
+	\begin{enumerate}
+		\item Write this definition in symbolic form using quantifiers by completing the following:
+		\begin{center}
+			An integer n is a multiple of 3 provided that ... \pause $\exists k \in \mathbb{Z}, n = 3k$.
+		\end{center}
+		\pause
+		\item Give several examples of integers (including negative integers) that are multiples of 3.\pause
+		\[-6,-3,0,3,6,9\]
+		\pause
+		\item Give several examples of integers (including negative integers) that are not multiples of 3.\pause
+		\[-5,-4,-2,-1,1,2,4,5\]
+	\end{enumerate}
+\end{frame}
+
+\begin{frame}{Progress Check 2.23}
+	\begin{enumerate}
+		\item[4.] Use the symbolic form of the definition of a multiple of 3 to complete the following sentence:
+		\begin{center}
+			An integer n is not a multiple of 3 provided that ... \pause $\forall k \in \mathbb{Z}, n \neq 3k$
+		\end{center}
+		\item[5.] Without using the symbols for quantifiers, complete the following sentence: 
+		\begin{center}
+			An integer n is not a multiple of 3 provided that ... \pause for any integer k, $n \neq 3k$.
+		\end{center}
+	\end{enumerate}
+\end{frame}
+
+\begin{frame}{Progress Check 2.24: Negating a Statement with Two Quantifiers}
+	Write the negation of the statement
+	\[
+	(\forall x \in \mathbb{Z})(\forall y \in \mathbb{Z})(x+y = 0)
+	\]
+	in symbolic form and as a sentence written in English. \pause
+	\[
+	(\exists x \in \mathbb{Z})(\exists y \in \mathbb{Z})(x+y \neq 0)
+	\]
+	\pause
+	There exists an integer x and there exists an integer y such that $x + y = 0$.
+\end{frame} 
+
+\end{document}
+
+

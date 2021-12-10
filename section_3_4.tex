@@ -1,0 +1,129 @@
+\documentclass{beamer}
+\usetheme{CambridgeUS}
+
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{amsthm}
+\usepackage{tikzsymbols}
+\usepackage{parskip}
+
+%These for for continuing numbering between frames
+\newcounter{saveenumi}
+\newcommand{\seti}{\setcounter{saveenumi}{\value{enumi}}}
+\newcommand{\conti}{\setcounter{enumi}{\value{saveenumi}}}
+
+%\newtheorem{theorem}{Theorem}[section]
+%\newtheorem{corollary}{Corollary}[theorem]
+%\newtheorem{lemma}[theorem]{Lemma}
+%\theoremstyle{definition}
+%\newtheorem{definition}{Definition}[section]
+\newtheorem{prop}[theorem]{Proposition}
+
+%Information to be included in the title page:
+\title{Section 3.4}
+\subtitle{Introduction to Proofs}
+\author{Dr. Ryan Johnson}
+\institute{Grace College}
+\date{Spring 2021}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\begin{frame}[plain]
+    \maketitle
+\end{frame}
+
+\begin{frame}{The Jesus Creed}
+\Large{
+"Hear, O Israel, the Lord our God, the Lord is one.\\
+You shall love the Lord your God\\
+\;\; with all your heart, with all your soul,\\
+\;\; with all your mind, and with all your strength.\\
+The second is this: Love your neighbor as yourself.\\
+There is no commandment greater than these."
+}
+\end{frame}
+
+\begin{frame}{Preview Activity 1}
+    \begin{enumerate}
+        \item Complete a truth table to show that
+        \[
+        (P \vee Q) \to R \equiv (P \to R) \wedge (Q \to R)
+        \] \pause
+        \item Suppose that you are trying to prove a statement that is written in the form $(P \vee Q) \to R$. Explain why you can complete this proof by writing separate and independent proofs of $P \to Q$ and $Q \to R$. \pause
+        \item Now consider the following proposition:
+        \begin{prop}
+            For all integers x and y, if xy is odd, then x is odd and y is odd.
+        \end{prop}
+        Write the contrapositive of this proposition.
+        \seti
+    \end{enumerate}
+\end{frame}
+
+\begin{frame}{Preview Activity 1}
+    \begin{enumerate}
+        \conti
+        \item Now prove that if x is an even integer, then xy is an even integer. Also, prove that if y is an even integer, then xy is an even integer. \pause
+        \item Use the results proved in part (4) and the explanation in part (2) to explain why we have proved the contrapositive of the proposition in part (3).
+    \end{enumerate}
+\end{frame}
+
+\begin{frame}{Preview Activity 2}
+    \begin{prop}
+        If n is an integer, then $n^2 + n$ is an even integer.
+    \end{prop} \pause
+    \begin{enumerate}
+        \item Complete the proof for the following proposition:
+        \begin{prop}
+            If n is an even integer, then $n^2 + n$ is an even integer.
+        \end{prop} \pause
+        \item Complete the proof for the following proposition:
+        \begin{prop}
+            If n is an odd integer, then $n^2 + n$ is an even integer.
+        \end{prop} \pause
+        \item Explain why the proofs of the two propositions above can be used to construct a proof of the original Proposition.
+    \end{enumerate}
+\end{frame}
+
+\begin{frame}{Progress Check 3.21}
+    Notes: common times we need to break things into cases, and writing guidelines for cases on p133-134. \pause
+    
+    Complete the proof of the following proposition:
+    \begin{prop}
+        For each integer $n$, $n^2 - 5n + 7$ is an odd integer.
+    \end{prop} 
+\end{frame}
+
+\begin{frame}{Progress Check 3.24*}
+    \begin{definition}
+    For $x \in \mathbb{R}$, we define $|x|$, called the \textbf{absolute value of} x by
+    \[
+    |x| = \begin{cases}
+    x, & \text{if } x \geq 0;\\
+    -x, & \text{if } x < 0.
+    \end{cases}
+    \]
+    \end{definition}
+\pause
+
+    Solve the following equations
+    \begin{enumerate}
+        \item $|t| = 12$.
+        \item $|t+3| = 5$.
+        \item $|t-4| = \frac{1}{5}$
+        \item $|3t - 4| = 8$.
+    \end{enumerate}
+\end{frame}
+
+\begin{frame}{Class Activity}
+    \begin{enumerate}
+        \item Prove Part (2) of Proposition 3.23 from the book
+        \[ \text{For each } x \in \mathbb{R}, |-x| = |x|. \]
+        \item Prove Part (2) of Theorem 3.25
+        \[ \text{For all real numbers } x \text{ and } y, |xy| = |x| |y| \]
+    \end{enumerate}
+\end{frame}
+
+\end{document}
+
+

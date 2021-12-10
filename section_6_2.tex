@@ -1,0 +1,130 @@
+\documentclass{beamer}
+\usetheme{CambridgeUS}
+
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{amsthm}
+\usepackage{tikzsymbols}
+\usepackage{parskip}
+\usepackage{multicol}
+
+%These for for continuing numbering between frames
+\newcounter{saveenumi}
+\newcommand{\seti}{\setcounter{saveenumi}{\value{enumi}}}
+\newcommand{\conti}{\setcounter{enumi}{\value{saveenumi}}}
+
+%\newtheorem{theorem}{Theorem}[section]
+%\newtheorem{corollary}{Corollary}[theorem]
+%\newtheorem{lemma}[theorem]{Lemma}
+%\theoremstyle{definition}
+%\newtheorem{definition}{Definition}[section]
+\newtheorem{prop}[theorem]{Proposition}
+
+%Information to be included in the title page:
+\title{Section 6.2}
+\subtitle{Introduction to Proofs}
+\author{Dr. Ryan Johnson}
+\institute{Grace College}
+\date{Spring 2021}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\begin{frame}[plain]
+    \maketitle
+\end{frame}
+
+\begin{frame}{The Jesus Creed}
+\Large{
+"Hear, O Israel, the Lord our God, the Lord is one.\\
+You shall love the Lord your God\\
+\;\; with all your heart, with all your soul,\\
+\;\; with all your mind, and with all your strength.\\
+The second is this: Love your neighbor as yourself.\\
+There is no commandment greater than these."
+}
+\end{frame}
+
+\begin{frame}[t]{Preview Activity 1}
+Which of the following equations can be used to define a function with $x \in \mathbb{R}$
+as the input and $y \in \mathbb{R}$ as the output?
+    \begin{enumerate}
+    \begin{multicols}{2}
+        \item Yes
+        \item No (two outputs)
+        \item Yes
+        \item Yes
+        \item No (zero or two outputs)
+        \item Yes
+        \item No (doesn't work for $x=1$)
+    \end{multicols}
+    \end{enumerate}
+\end{frame}
+
+\begin{frame}{Preview Activity 2}
+    \begin{enumerate}
+        \item b the birthday function
+        \begin{enumerate}
+            \item Because every person has exactly one birthday.
+            \item $b(\text{Andrew Wiles}) = \text{April 11, 1953}$
+            \item True
+            \item False
+        \end{enumerate}
+        \seti
+    \end{enumerate}
+\end{frame}
+
+\begin{frame}{Preview Activity 2}
+    \begin{enumerate}
+        \conti
+        \item Calculate $s(k)$ for each natural number k from 1 through 15
+        \item Does there exist a natural number n such that $s(k) = 5$? Justify your conclusion.
+        \item Is it possible to find two different natural numbers m and n such that $s(m) = s(n)$? Explain.
+        \item Use response to answer questions
+        \begin{enumerate}
+            \item For each $m \in \mathbb{N}$, there exists a natural number n such that $s(n) = m$.
+            \item For all $m,n \in \mathbb{N}$, if $m \neq n$, then $s(m) \neq s(n)$.
+        \end{enumerate}
+    \end{enumerate}
+\end{frame}
+
+\begin{frame}{Progress Check 6.1}
+    \begin{definition}
+    Definition. A function from a set A to a set B is a rule that associates with
+each element x of the set A exactly one element of the set B. A function from
+A to B is also called a mapping from A to B.
+    \end{definition}
+    
+     Let $f : \mathbb{R} \to \mathbb{R}$ be defined by $f(x) = x^2 - 5x$ and $g : \mathbb{Z} \to \mathbb{Z}$ be defined by $g(m) = m^2 - 5m$.
+     \begin{enumerate}
+         \item Determine $f(-3)$ and $f(\sqrt{8}$.
+         \item Determine $g(2)$ and $g(-2)$
+         \item Determine the set of all preimages of 6 for the function f.
+        \item Determine the set of all preimages of 6 for the function g.
+        \item Determine the set of all preimages of 2 for the function f.
+        \item Determine the set of all preimages of 2 for the function g.
+     \end{enumerate}    
+\end{frame}
+
+\begin{frame}{Progress Check 6.2}
+    Let b be the function that assigns to each person his or her birthday (month
+and day).
+\begin{enumerate}
+    \item What is the domain of this function?
+    \item What is a codomain for this function?
+    \item What is the range of this function?
+\end{enumerate}
+Let s be the function that associates with each natural number the sum of its
+distinct natural number factors.
+\begin{enumerate}
+    \item What is the domain of this function?
+    \item What is a codomain for this function?
+    \item Is the range equal to the codomain?
+\end{enumerate}
+\end{frame}
+
+
+
+\end{document}
+
+
